@@ -14,58 +14,44 @@ const compPlay = () => {
 } 
 
 const playRound = (playerSelection, computerSelection) => {
-    
+    const p = document.createElement('p')
     if (playerSelection === computerSelection){
-        const p = document.createElement('p')
         p.innerText = `You Tied you both picked ${playerSelection}`
-        outcomeDiv.appendChild(p)
-    } 
-     else if (playerSelection === 'rock'  && computerSelection === 'scissors'){
+    } else if (playerSelection === 'rock'  && computerSelection === 'scissors'){
         playerScore++
-        const p = document.createElement('p')
         p.innerText = 'You won! You rock'
-        outcomeDiv.appendChild(p)
     } else if (playerSelection === 'paper'  && computerSelection === 'rock'){
         playerScore++
-        const p = document.createElement('p')
         p.innerText = 'You won! You picked paper'
-        outcomeDiv.appendChild(p)
     } else if (playerSelection === 'scissors'  && computerSelection === 'paper'){
         playerScore++
-        const p = document.createElement('p')
         p.innerText =  'You won! You picked scissors'
-        outcomeDiv.appendChild(p)
     } else if (playerSelection === 'rock'  && computerSelection === 'paper'){
         compScore++
-        const p = document.createElement('p')
         p.innerText = 'You lost! Paper covers rock'
-        outcomeDiv.appendChild(p)
     } else if (playerSelection === 'paper'  && computerSelection === 'scissors'){
         compScore++
-        const p = document.createElement('p')
         p.innerText = 'You lost! Scissors cut paper'
-        outcomeDiv.appendChild(p)
     } else if (playerSelection === 'scissors'  && computerSelection === 'rock'){
         compScore++
         const p = document.createElement('p')
         p.innerText = 'You lost! Rock smashes scissors'
-        outcomeDiv.appendChild(p)
     }
+    outcomeDiv.appendChild(p)
+
 }
 
 const checkWinner = (playerScore, compScore) => {
+    const h2 = document.createElement('h2')
     if (playerScore === 5) {
-        const h2 = document.createElement('h2')
         h2.classList.add('player-won')
         h2.innerText = `You won ${playerScore} to ${compScore} great job beating the computer!`
-        outcomeDiv.appendChild(h2)
     }
     if (compScore === 5){
-        const h2 = document.createElement('h2')
         h2.classList.add('computer-won')
         h2.innerText = `You lost ${playerScore} to ${compScore} great job computer!`
-        outcomeDiv.appendChild(h2)
     }
+    outcomeDiv.appendChild(h2)
 }
 
 const updateScores = (playerScore, computerScore) => {

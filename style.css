@@ -7,6 +7,7 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background: linear-gradient(90deg, burlywood, blue, red);
 }
 
 main{
@@ -44,4 +45,11 @@ footer {
     color: red;
     border-radius: 6px;
     padding: 12px 10px;
+}
+
+.running-score {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: -35px;
+    
 }

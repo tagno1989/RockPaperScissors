@@ -46,11 +46,12 @@ const checkWinner = (playerScore, compScore) => {
     if (playerScore === 5) {
         h2.classList.add('player-won')
         h2.innerText = `You won ${playerScore} to ${compScore} great job beating the computer!`
+        
     }
     if (compScore === 5){
         h2.classList.add('computer-won')
         h2.innerText = `You lost ${playerScore} to ${compScore} great job computer!`
-    }
+    } 
     outcomeDiv.appendChild(h2)
 }
 
